@@ -4,11 +4,10 @@ def main():
     c = 0
 
     for i in lines:
-        for j in range(int(i.split("-")[0]), int(i.split("-")[1]) + 1):
-            for k in range(0, (len(str(j))//2) + 1):
-                # print(str(j)[k:])
+        for j in range(int(i.split("-")[0]), int(i.split("-")[1]) + 1):     # iterate over each number in the range (inclusive)
+            for k in range(0, (len(str(j))//2) + 1):                        # iterate until the number over halfway of the string (string is symmetric)
                 if str(j)[:k].__contains__(str(j)[k:]):
-                    print(f"The number {j} is made up of repeating digits")
+                    print(f"The number {j} is made up of repeating digits {str(j)[k:]}") # print valid matches (testing)
                     c += j
             
                 
