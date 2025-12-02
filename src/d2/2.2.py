@@ -5,13 +5,14 @@ def main():
 
     for i in lines:
         for j in range(int(i.split("-")[0]), int(i.split("-")[1]) + 1):
-            for k in range(0, (len(str(j))//2) + 1):
-                # print(str(j)[k:])
-                if str(j)[:k].__contains__(str(j)[k:]):
-                    print(f"The number {j} is made up of repeating digits")
+            for k in range(1, (len(str(j))//2) + 1):
+                ss = str(j)[:k]
+                                
+                if ss*(len(str(j)) // len(ss)) == str(j):                   
+                    print(f"{j},\t{str(j)[:k]}")
                     c += j
-            
-                
+                    break
+                           
     print(f"\n{c}")
         
     
