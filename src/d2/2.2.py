@@ -9,7 +9,7 @@ def main():
                 ss = str(j)[:k]
                                 
                 if ss*(len(str(j)) // len(ss)) == str(j):                   
-                    print(f"{j},\t{str(j)[:k]}")
+                    print(f"The number {j}\t is made up of:\t{str(j)[:k]}")
                     c += j
                     break
                            
