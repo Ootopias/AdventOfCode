@@ -1,0 +1,1 @@
+My solutions to the 2025 Advent of Code coding challenge
